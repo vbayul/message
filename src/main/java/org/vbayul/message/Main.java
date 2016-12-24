@@ -1,23 +1,21 @@
 package org.vbayul.message;
 
 import java.util.Date;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Keys key = new Keys();
-		String keys = key.getKey(new Date());
+		Resources resources = new Resources();		
+		Keys keys = new Keys();
 		
-		Localization loc = new Localization();
+		String key = keys.getKey(new Date());
+		String lang = Locale.getDefault().getLanguage();
+		ResourceBundle bundels = resources.getBundels(lang);
 		
-		String lang = loc.getLocale();
-		
-		Resources rs = new Resources();
-		ResourceBundle rb = rs.getBundels(lang);
-		String message = rb.getString(keys);
-		
+		String message = bundels.getString(key);
 		System.out.println(message);
 	}
 }

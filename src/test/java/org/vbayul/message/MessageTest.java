@@ -3,33 +3,12 @@ package org.vbayul.message;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 import org.junit.Test;
 import junit.framework.TestCase;
 
 public class MessageTest extends TestCase {
-
-	@Test
-	public void testLocalizationRU()
-	{
-		Locale.setDefault(new Locale("ru", "RU"));
-		
-		Localization local = new Localization();
-		String lang =  local.getLocale();
-		assertEquals("ru", lang);
-	}
-	
-	@Test
-	public void testLocalizationFR()
-	{
-		Locale.setDefault(new Locale("fr", "FR"));
-		
-		Localization local = new Localization();
-		String lang =  local.getLocale();
-		assertEquals("fr", lang);
-	}
 	
 	@Test
 	public void testResourceRU()
@@ -84,6 +63,247 @@ public class MessageTest extends TestCase {
 		
 		Keys keys = new Keys();
 		String key = keys.getKey(testDate);
+		
 		assertEquals("part1", key);
+	}
+	
+	@Test
+	public void testPart1()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("07:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good morning, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart2()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("12:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good day, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart3()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("21:30:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good evening, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart4()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("05:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good night, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart1Border()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("06:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good morning, World!", bundels.getString(key));
+		try 
+		{
+			testDate = sdf.parse("08:59:59");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+
+		key = keys.getKey(testDate);
+		rosources = new Resources();
+		bundels = rosources.getBundels("en");
+		
+		assertEquals("Good morning, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart2Border()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("09:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good day, World!", bundels.getString(key));
+		try 
+		{
+			testDate = sdf.parse("18:59:59");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+
+		key = keys.getKey(testDate);
+		rosources = new Resources();
+		bundels = rosources.getBundels("en");
+		
+		assertEquals("Good day, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart3Border()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("19:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good evening, World!", bundels.getString(key));
+		try 
+		{
+			testDate = sdf.parse("22:59:59");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+
+		key = keys.getKey(testDate);
+		rosources = new Resources();
+		bundels = rosources.getBundels("en");
+		
+		assertEquals("Good evening, World!", bundels.getString(key));
+	}
+	
+	@Test
+	public void testPart4Border()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		Date testDate = new Date();
+		
+		try 
+		{
+			testDate = sdf.parse("23:00:00");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		Keys keys = new Keys();
+		String key = keys.getKey(testDate);
+		Resources rosources = new Resources();
+		ResourceBundle bundels = rosources.getBundels("en");
+		
+		assertEquals("Good night, World!", bundels.getString(key));
+		try 
+		{
+			testDate = sdf.parse("05:59:59");
+		} 
+		catch (ParseException e) 
+		{
+			e.printStackTrace();
+		}
+
+		key = keys.getKey(testDate);
+		rosources = new Resources();
+		bundels = rosources.getBundels("en");
+		
+		assertEquals("Good night, World!", bundels.getString(key));
 	}
 }

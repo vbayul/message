@@ -38,7 +38,8 @@ public class Keys {
 				e.printStackTrace();
 		}
  
-		if ((timeStart.before(currentTime)) && (timeEnd.after(currentTime)))
+		if ((timeStart.getTime() <= currentTime.getTime()) 
+				&& (timeEnd.getTime() >=currentTime.getTime()))
 			return true;
 		else
 			return false;

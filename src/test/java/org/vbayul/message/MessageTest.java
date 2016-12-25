@@ -37,7 +37,7 @@ public class MessageTest extends TestCase {
 		assertEquals("Добрый день, Мир!", result2);
 		assertEquals("Добрый вечер, Мир!", result3);
 		assertEquals("Доброй ночи, Мир!", result4);
-		log.info("Test of resources of Russian languche successful");
+		log.info("Test of resources of Russian languche successful\n");
 	}
 	
 	@Test
@@ -60,7 +60,7 @@ public class MessageTest extends TestCase {
 		assertEquals("Good day, World!", result2);
 		assertEquals("Good evening, World!", result3);
 		assertEquals("Good night, World!", result4);
-		log.info("Test of resources of English/Default languche successful");
+		log.info("Test of resources of English/Default languche successful\n");
 	}
 
 	@Test
@@ -96,7 +96,7 @@ public class MessageTest extends TestCase {
 		assertEquals("part3", key3);
 		assertEquals("part4", key4);
 		
-		log.info("Test of Keys method successful");
+		log.info("Test of Keys method successful\n");
 	}
 	
 	@Test
@@ -133,7 +133,7 @@ public class MessageTest extends TestCase {
 		assertEquals("Good day, World!", bundels.getString(key2));
 		assertEquals("Good evening, World!", bundels.getString(key3));
 		assertEquals("Good night, World!", bundels.getString(key4));
-		log.info("Test of random parts is successful");
+		log.info("Test of random parts is successful\n");
 	}
 	
 	@Test
@@ -169,7 +169,7 @@ public class MessageTest extends TestCase {
 		assertEquals("Good morning, World!", bundels.getString(key2));
 		assertEquals("Good day, World!", bundels.getString(key3));
 		assertEquals("Good day, World!", bundels.getString(key4));
-		log.info("Test of border between  6-9 and 9-19 successful");
+		log.info("Test of border between  6-9 and 9-19 successful\n");
 	}
 	
 	@Test
@@ -204,6 +204,6 @@ public class MessageTest extends TestCase {
 		assertEquals("Good evening, World!", bundels.getString(key2));
 		assertEquals("Good night, World!", bundels.getString(key3));
 		assertEquals("Good night, World!", bundels.getString(key4));
-		log.info("Test of border between  19-23 and 23-6 is successful");
+		log.info("Test of border between  19-23 and 23-6 is successful\n");
 	}
 }

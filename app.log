@@ -1,0 +1,30 @@
+2016-12-26 14:34:55.419 [main] INFO  file - Start program
+2016-12-26 14:34:55.423 [main] INFO  file - Start getKeys method
+2016-12-26 14:34:55.424 [main] INFO  file - Start betweenStartAndEnd method with 6 - 9
+2016-12-26 14:34:55.425 [main] INFO  file - End betweenStartAndEnd method
+2016-12-26 14:34:55.426 [main] INFO  file - Start betweenStartAndEnd method with 9 - 19
+2016-12-26 14:34:55.426 [main] INFO  file - End betweenStartAndEnd method
+2016-12-26 14:34:55.427 [main] INFO  file - Get key string
+2016-12-26 14:34:55.427 [main] INFO  file - Get language ru
+2016-12-26 14:34:55.427 [main] INFO  file - Start getBundels method
+2016-12-26 14:34:55.427 [main] INFO  file - Set language ru
+2016-12-26 14:34:55.427 [main] INFO  file - Get resource
+2016-12-26 14:34:55.429 [main] INFO  file - End getBundels method
+2016-12-26 14:34:55.429 [main] INFO  file - Get bundels by language
+2016-12-26 14:34:55.430 [main] INFO  file - Get message by key
+2016-12-26 14:34:55.430 [main] INFO  file - Output message
+2016-12-26 14:35:15.069 [main] INFO  file - Start program
+2016-12-26 14:35:15.075 [main] INFO  file - Start getKeys method
+2016-12-26 14:35:15.076 [main] INFO  file - Start betweenStartAndEnd method with 6 - 9
+2016-12-26 14:35:15.078 [main] INFO  file - End betweenStartAndEnd method
+2016-12-26 14:35:15.078 [main] INFO  file - Start betweenStartAndEnd method with 9 - 19
+2016-12-26 14:35:15.079 [main] INFO  file - End betweenStartAndEnd method
+2016-12-26 14:35:15.079 [main] INFO  file - Get key string
+2016-12-26 14:35:15.079 [main] INFO  file - Get language ru
+2016-12-26 14:35:15.080 [main] INFO  file - Start getBundels method
+2016-12-26 14:35:15.080 [main] INFO  file - Set language ru
+2016-12-26 14:35:15.080 [main] INFO  file - Get resource
+2016-12-26 14:35:15.082 [main] INFO  file - End getBundels method
+2016-12-26 14:35:15.082 [main] INFO  file - Get bundels by language
+2016-12-26 14:35:15.082 [main] INFO  file - Get message by key
+2016-12-26 14:35:15.082 [main] INFO  file - Output message

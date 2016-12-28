@@ -19,7 +19,7 @@ public class MessageTest extends TestCase {
 		log.debug("Prepare resources");
 		
 		Resources res = new Resources();
-		ResourceBundle rb = res.getBundels("ru");
+		ResourceBundle rb = res.getBundels("ru","RU");
 		
 		String result1 = rb.getString("part1");
 		String result2 = rb.getString("part2");
@@ -42,7 +42,7 @@ public class MessageTest extends TestCase {
 		
 		log.debug("Prepare resources");
 		Resources res = new Resources();
-		ResourceBundle rb = res.getBundels("en");
+		ResourceBundle rb = res.getBundels("","");
 		
 		String result1 = rb.getString("part1");
 		String result2 = rb.getString("part2");
@@ -110,7 +110,7 @@ public class MessageTest extends TestCase {
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();
-		ResourceBundle bundels = rosources.getBundels("en");
+		ResourceBundle bundels = rosources.getBundels("","");
 		log.debug("Сompare results");
 		
 		assertEquals("Good morning, World!", bundels.getString(key1));
@@ -140,7 +140,7 @@ public class MessageTest extends TestCase {
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();
-		ResourceBundle bundels = rosources.getBundels("en");
+		ResourceBundle bundels = rosources.getBundels("","");
 		
 		log.debug("Сompare results");
 		assertEquals("Good morning, World!", bundels.getString(key1));
@@ -170,7 +170,7 @@ public class MessageTest extends TestCase {
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();
-		ResourceBundle bundels = rosources.getBundels("en");
+		ResourceBundle bundels = rosources.getBundels("","");
 		
 		log.debug("Сompare results");		
 		assertEquals("Good evening, World!", bundels.getString(key1));

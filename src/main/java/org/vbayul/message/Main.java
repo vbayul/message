@@ -21,9 +21,10 @@ public class Main {
 		log.info("Get key string");
 		
 		String lang = Locale.getDefault().getLanguage();
-		log.info("Get language " + lang);
+		String country = Locale.getDefault().getCountry();
+		log.info("Get language " + lang +" and country"+ country);
 		
-		ResourceBundle bundels = resources.getBundels(lang);
+		ResourceBundle bundels = resources.getBundels(lang, country);
 		log.info("Get bundels by language");
 		
 		String message = bundels.getString(key);

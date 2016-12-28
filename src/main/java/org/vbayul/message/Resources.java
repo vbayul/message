@@ -10,18 +10,23 @@ public class Resources {
 	
 	private static final Logger log = LogManager.getLogger("file");
 	
-	public ResourceBundle getBundels(String lang)
+	public ResourceBundle getBundels(String lang, String country)
 	{
 		log.info("Starting getBundels method");
+		ResourceBundle messages ;
 		
-		log.info("Set language " + lang);		
-		Locale.setDefault(new Locale(lang));
-		
-		log.info("Get resource");		
-		ResourceBundle bundles = ResourceBundle.getBundle("message");
+		if (lang.equals(""))
+		{	
+			log.info("Set language = " + lang + " and  country = ");
+			Locale currentLocale = new Locale(lang, country);
+			
+			log.info("Get resource");		
+			messages = ResourceBundle.getBundle("MessagesBundle", currentLocale);
+		}
+		else
+			messages = ResourceBundle.getBundle("MessagesBundle");
 		
 		log.info("Ending getBundels method");
-		return bundles;
-
+		return messages;
 	}
 }

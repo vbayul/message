@@ -10,35 +10,11 @@ import junit.framework.TestCase;
 
 public class MessageTest extends TestCase {
 	private static final Logger log = LogManager.getLogger(MessageTest.class);
-
-	@Test
-	public void testResourceRU()
-	{
-
-		log.debug("Begin test of resources of Russian languche");
-		log.debug("Prepare resources");
-		
-		Resources res = new Resources();
-		ResourceBundle rb = res.getBundels("ru","RU");
-		
-		String result1 = rb.getString("part1");
-		String result2 = rb.getString("part2");
-		String result3 = rb.getString("part3");
-		String result4 = rb.getString("part4");
-		
-		log.debug("Сompare results");
-		
-		assertEquals("Доброе утро, Мир!", result1);
-		assertEquals("Добрый день, Мир!", result2);
-		assertEquals("Добрый вечер, Мир!", result3);
-		assertEquals("Доброй ночи, Мир!", result4);
-		log.debug("Test of resources of Russian languche successful\n");
-	}
 	
 	@Test
-	public void testResourceDefaultEN()
+	public void testResource()
 	{
-		log.debug("Begin test of resources of English/Default languche");	
+		log.debug("Begin test of resources");	
 		
 		log.debug("Prepare resources");
 		Resources res = new Resources();
@@ -55,69 +31,7 @@ public class MessageTest extends TestCase {
 		assertEquals("Good day, World!", result2);
 		assertEquals("Good evening, World!", result3);
 		assertEquals("Good night, World!", result4);
-		log.debug("Test of resources of English/Default languche successful\n");
-	}
-
-	@Test
-	public void testKeys()
-	{
-		log.debug("Test of Keys method begin");
-		log.debug("Prepare variables");
-		
-		LocalTime testTime1 = LocalTime.of(07,0,0);
-		LocalTime testTime2 = LocalTime.of(12,00,00);
-		LocalTime testTime3 = LocalTime.of(21,30,00);
-		LocalTime testTime4 = LocalTime.of(05,00,00);
-
-		
-		log.debug("Prepare method keys");		
-		Keys keys = new Keys();
-		
-		String key1 = keys.getKey(testTime1);
-		String key2 = keys.getKey(testTime2);
-		String key3 = keys.getKey(testTime3);
-		String key4 = keys.getKey(testTime4);
-		
-		log.debug("Сompare results");
-		
-		assertEquals("part1", key1);
-		assertEquals("part2", key2);
-		assertEquals("part3", key3);
-		assertEquals("part4", key4);
-		
-		log.debug("Test of Keys method successful\n");
-	}
-	
-	@Test
-	public void testParts()
-	{
-		log.debug("Test of  begin");
-		log.debug("Prepare variables");
-		
-		LocalTime testTime1 =  LocalTime.of(7,00,00);
-		LocalTime testTime2 =  LocalTime.of(12,00,00);
-		LocalTime testTime3 =  LocalTime.of(21,30,00);
-		LocalTime testTime4 =  LocalTime.of(5,00,00);
-
-		
-		log.debug("Prepare method keys");
-		Keys keys = new Keys();
-		
-		String key1 = keys.getKey(testTime1);
-		String key2 = keys.getKey(testTime2);
-		String key3 = keys.getKey(testTime3);
-		String key4 = keys.getKey(testTime4);
-		
-		log.debug("Prepare resource");
-		Resources rosources = new Resources();
-		ResourceBundle bundels = rosources.getBundels("","");
-		log.debug("Сompare results");
-		
-		assertEquals("Good morning, World!", bundels.getString(key1));
-		assertEquals("Good day, World!", bundels.getString(key2));
-		assertEquals("Good evening, World!", bundels.getString(key3));
-		assertEquals("Good night, World!", bundels.getString(key4));
-		log.debug("Test of random parts is successful\n");
+		log.debug("Test of resources successful\n");
 	}
 	
 	@Test

@@ -9,25 +9,27 @@ public class Keys {
 	
 	public String getKey(LocalTime currentTime)
 	{
+		String key = "part4";
+		
 		log.info("Starting getKeys method");
         if (isBetweenStartAndEnd(currentTime, 6, 9))
         {
         	log.info("Ending getKeys method");
-            return "part1";
+        	key = "part1";
         }
         if (isBetweenStartAndEnd(currentTime, 9, 19))
         {
         	log.info("Ending getKeys method");
-        	return "part2";
+        	key = "part2";
         }
         if (isBetweenStartAndEnd(currentTime, 19, 23))
         {
         	log.info("Ending getKeys method");
-            return "part3";
+        	key = "part3";
     	}
         
 		log.info("Ending getKeys method");
-		return "part4";
+		return key;
 	}
 	
 	private boolean isBetweenStartAndEnd(LocalTime currentTime, int startTime, int endTime)

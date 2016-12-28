@@ -1,12 +1,12 @@
 language: java
 sudo: false
--dist: trusty
--
+dist: trusty
+
  addons:
    apt:
      packages:
        - oracle-java8-installer
- install:
+install:
    - true
- script:
+script:
 - true

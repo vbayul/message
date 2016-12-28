@@ -1,8 +1,6 @@
 package org.vbayul.message;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
@@ -13,12 +11,6 @@ import junit.framework.TestCase;
 public class MessageTest extends TestCase {
 	private static final Logger log = LogManager.getLogger(MessageTest.class);
 
-	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-	Date testDate1 = new Date();
-	Date testDate2 = new Date();
-	Date testDate3 = new Date();
-	Date testDate4 = new Date();
-	
 	@Test
 	public void testResourceRU()
 	{
@@ -72,25 +64,19 @@ public class MessageTest extends TestCase {
 		log.debug("Test of Keys method begin");
 		log.debug("Prepare variables");
 		
-		try 
-		{
-			testDate1 = sdf.parse("07:00:00");
-			testDate2 = sdf.parse("12:00:00");
-			testDate3 = sdf.parse("21:30:00");
-			testDate4 = sdf.parse("05:00:00");
-		} 
-		catch (ParseException e) 
-		{
-			e.printStackTrace();
-		}
+		LocalTime testTime1 = LocalTime.of(07,0,0);
+		LocalTime testTime2 = LocalTime.of(12,00,00);
+		LocalTime testTime3 = LocalTime.of(21,30,00);
+		LocalTime testTime4 = LocalTime.of(05,00,00);
+
 		
 		log.debug("Prepare method keys");		
 		Keys keys = new Keys();
 		
-		String key1 = keys.getKey(testDate1);
-		String key2 = keys.getKey(testDate2);
-		String key3 = keys.getKey(testDate3);
-		String key4 = keys.getKey(testDate4);
+		String key1 = keys.getKey(testTime1);
+		String key2 = keys.getKey(testTime2);
+		String key3 = keys.getKey(testTime3);
+		String key4 = keys.getKey(testTime4);
 		
 		log.debug("Сompare results");
 		
@@ -108,30 +94,25 @@ public class MessageTest extends TestCase {
 		log.debug("Test of  begin");
 		log.debug("Prepare variables");
 		
-		try 
-		{
-			testDate1 = sdf.parse("07:00:00");
-			testDate2 = sdf.parse("12:00:00");
-			testDate3 = sdf.parse("21:30:00");
-			testDate4 = sdf.parse("05:00:00");
-		} 
-		catch (ParseException e) 
-		{
-			e.printStackTrace();
-		}
+		LocalTime testTime1 =  LocalTime.of(7,00,00);
+		LocalTime testTime2 =  LocalTime.of(12,00,00);
+		LocalTime testTime3 =  LocalTime.of(21,30,00);
+		LocalTime testTime4 =  LocalTime.of(5,00,00);
+
 		
 		log.debug("Prepare method keys");
 		Keys keys = new Keys();
 		
-		String key1 = keys.getKey(testDate1);
-		String key2 = keys.getKey(testDate2);
-		String key3 = keys.getKey(testDate3);
-		String key4 = keys.getKey(testDate4);
+		String key1 = keys.getKey(testTime1);
+		String key2 = keys.getKey(testTime2);
+		String key3 = keys.getKey(testTime3);
+		String key4 = keys.getKey(testTime4);
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();
 		ResourceBundle bundels = rosources.getBundels("en");
 		log.debug("Сompare results");
+		
 		assertEquals("Good morning, World!", bundels.getString(key1));
 		assertEquals("Good day, World!", bundels.getString(key2));
 		assertEquals("Good evening, World!", bundels.getString(key3));
@@ -144,24 +125,18 @@ public class MessageTest extends TestCase {
 	{
 		log.debug("Test of border between  6-9 and 9-19 begin");
 		log.debug("Prepare variables");
-		try 
-		{
-			testDate1 = sdf.parse("06:00:00");
-			testDate2 = sdf.parse("08:59:59");
-			testDate3 = sdf.parse("09:00:00");
-			testDate4 = sdf.parse("18:59:59");
-		} 
-		catch (ParseException e) 
-		{
-			e.printStackTrace();
-		}
+		LocalTime testTime1 =  LocalTime.of(6,00,00);
+		LocalTime testTime2 =  LocalTime.of(8,59,59);
+		LocalTime testTime3 =  LocalTime.of(9,00,00);
+		LocalTime testTime4 =  LocalTime.of(18,59,59);
+
 		log.debug("Prepare method keys");
 		Keys keys = new Keys();
 		
-		String key1 = keys.getKey(testDate1);
-		String key2 = keys.getKey(testDate2);
-		String key3 = keys.getKey(testDate3);
-		String key4 = keys.getKey(testDate4);
+		String key1 = keys.getKey(testTime1);
+		String key2 = keys.getKey(testTime2);
+		String key3 = keys.getKey(testTime3);
+		String key4 = keys.getKey(testTime4);
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();
@@ -179,24 +154,19 @@ public class MessageTest extends TestCase {
 	public void testPartBordersNineteenToSix()
 	{
 		log.debug("Test of border between  19-23 and 23-6 begin");
-		try 
-		{
-			testDate1 = sdf.parse("19:00:00");
-			testDate2 = sdf.parse("22:59:59");
-			testDate3 = sdf.parse("23:00:00");
-			testDate4 = sdf.parse("05:59:59");
-		} 
-		catch (ParseException e) 
-		{
-			e.printStackTrace();
-		}
+
+		LocalTime testTime1 =  LocalTime.of(19,00,00);
+		LocalTime testTime2 =  LocalTime.of(22,59,59);
+		LocalTime testTime3 =  LocalTime.of(23,00,00);
+		LocalTime testTime4 =  LocalTime.of(05,59,59);
+			
 		log.debug("Prepare method keys");
 		Keys keys = new Keys();
 		
-		String key1 = keys.getKey(testDate1);
-		String key2 = keys.getKey(testDate2);
-		String key3 = keys.getKey(testDate3);
-		String key4 = keys.getKey(testDate4);
+		String key1 = keys.getKey(testTime1);
+		String key2 = keys.getKey(testTime2);
+		String key3 = keys.getKey(testTime3);
+		String key4 = keys.getKey(testTime4);
 		
 		log.debug("Prepare resource");
 		Resources rosources = new Resources();

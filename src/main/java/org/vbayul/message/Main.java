@@ -1,6 +1,6 @@
 package org.vbayul.message;
 
-import java.util.Date;
+import java.time.LocalTime;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -17,7 +17,7 @@ public class Main {
 		Resources resources = new Resources();		
 		Keys keys = new Keys();
 		
-		String key = keys.getKey(new Date());
+		String key = keys.getKey(LocalTime.now());
 		log.info("Get key string");
 		
 		String lang = Locale.getDefault().getLanguage();

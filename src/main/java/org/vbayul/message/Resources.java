@@ -22,5 +22,6 @@ public class Resources {
 		
 		log.info("Ending getBundels method");
 		return bundles;
+
 	}
 }

@@ -402,3 +402,67 @@
 2016-12-28 17:00:41.705 [main] INFO  file - Set language =  and  country = 
 2016-12-28 17:00:41.705 [main] INFO  file - Get resource
 2016-12-28 17:00:41.705 [main] INFO  file - Ending getBundels method
+2016-12-29 14:28:28.338 [main] INFO  file - Starting getBundels method
+2016-12-29 14:28:28.338 [main] INFO  file - Set language =  and  country = 
+2016-12-29 14:28:28.339 [main] INFO  file - Get resource
+2016-12-29 14:28:28.340 [main] INFO  file - Ending getBundels method
+2016-12-29 14:28:28.347 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.347 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.347 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.347 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.348 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.348 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.348 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.348 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.348 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.348 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.349 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.349 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.349 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.349 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.349 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.349 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.350 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.350 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.350 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.350 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.350 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.350 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.350 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.351 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.351 [main] INFO  file - Starting getBundels method
+2016-12-29 14:28:28.351 [main] INFO  file - Set language =  and  country = 
+2016-12-29 14:28:28.351 [main] INFO  file - Get resource
+2016-12-29 14:28:28.351 [main] INFO  file - Ending getBundels method
+2016-12-29 14:28:28.352 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.352 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.353 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.353 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.353 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.353 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.353 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.353 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.353 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.353 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.353 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.354 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.354 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.354 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.354 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.354 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.354 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.354 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.354 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.354 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.355 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.355 [main] INFO  file - Starting getKeys method
+2016-12-29 14:28:28.355 [main] INFO  file - Starting betweenStartAndEnd method with 6 - 9
+2016-12-29 14:28:28.355 [main] INFO  file - Starting betweenStartAndEnd method with 9 - 19
+2016-12-29 14:28:28.355 [main] INFO  file - Ending betweenStartAndEnd method
+2016-12-29 14:28:28.355 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.355 [main] INFO  file - Starting betweenStartAndEnd method with 19 - 23
+2016-12-29 14:28:28.355 [main] INFO  file - Ending getKeys method
+2016-12-29 14:28:28.356 [main] INFO  file - Starting getBundels method
+2016-12-29 14:28:28.356 [main] INFO  file - Set language =  and  country = 
+2016-12-29 14:28:28.356 [main] INFO  file - Get resource
+2016-12-29 14:28:28.356 [main] INFO  file - Ending getBundels method

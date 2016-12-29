@@ -37,17 +37,16 @@ public class Keys {
 		log.info("Starting betweenStartAndEnd method with " + startTime +" - "+ endTime);
 		LocalTime timeStart = LocalTime.of(startTime-1, 59, 59);
 		LocalTime timeEnd = LocalTime.of(endTime, 00, 00);
-
+		
+		boolean result = false;
+		
 		if ((currentTime.isAfter(timeStart)) 
 				&& (currentTime.isBefore(timeEnd)))
 		{
 			log.info("Ending betweenStartAndEnd method");
-			return true;
+			result = true;
 		}
-		else
-		{
-			log.info("End betweenStartAndEnd method");
-			return false;
-		}
+		
+		return result;
 	}
 }
